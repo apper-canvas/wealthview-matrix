@@ -17,10 +17,10 @@ const Layout = ({ children }) => {
       />
       
       <div className="flex">
-        {/* Mobile sidebar toggle */}
+{/* Mobile sidebar toggle */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="lg:hidden fixed top-20 left-4 z-50 bg-white p-2 rounded-lg shadow-lg border"
+          className="lg:hidden fixed top-24 left-4 z-50 bg-white p-3 rounded-xl shadow-premium border border-secondary-200 hover:shadow-premium-lg transition-all duration-200"
         >
           <ApperIcon name={sidebarOpen ? "X" : "BarChart3"} size={20} />
         </button>
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
           lg:translate-x-0 transition-transform duration-300 ease-in-out
           bg-white border-r border-gray-200 lg:w-80 w-72
-          mt-16 lg:mt-16
+          mt-20 lg:mt-20
         `}>
           <WatchlistSidebar />
         </div>
