@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import ApperIcon from '@/components/ApperIcon';
 import Navigation from '@/components/molecules/Navigation';
 
 const Header = ({ portfolioValue = 0, dayChange = 0, dayChangePercent = 0 }) => {
+  const navigate = useNavigate();
   const formatCurrency = (value) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -16,9 +19,18 @@ const Header = ({ portfolioValue = 0, dayChange = 0, dayChangePercent = 0 }) => 
   };
 
   const getTrendIcon = () => {
-    return dayChange >= 0 ? 'TrendingUp' : 'TrendingDown';
+return dayChange >= 0 ? 'TrendingUp' : 'TrendingDown';
   };
 
+  const handleNotifications = () => {
+    navigate('/notifications');
+    toast.info('Opening notifications...');
+  };
+
+  const handleSettings = () => {
+    navigate('/settings');
+    toast.info('Opening settings...');
+  };
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
@@ -75,12 +87,20 @@ className="bg-gradient-surface border-b border-secondary-200 shadow-premium stic
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex items-center space-x-3 flex-shrink-0"
+className="flex items-center space-x-3 flex-shrink-0"
           >
-            <button className="p-3 text-secondary-600 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 shadow-card hover:shadow-card-hover border border-secondary-100">
+            <button 
+              onClick={handleNotifications}
+              className="p-3 text-secondary-600 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 shadow-card hover:shadow-card-hover border border-secondary-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+              aria-label="Open notifications"
+            >
               <ApperIcon name="Bell" size={22} />
             </button>
-            <button className="p-3 text-secondary-600 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 shadow-card hover:shadow-card-hover border border-secondary-100">
+            <button 
+              onClick={handleSettings}
+              className="p-3 text-secondary-600 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 shadow-card hover:shadow-card-hover border border-secondary-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+              aria-label="Open settings"
+            >
               <ApperIcon name="Settings" size={22} />
             </button>
           </motion.div>
