@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "quantity": 50,
+    "avgCost": 150.25,
+    "currentPrice": 175.43,
+    "marketValue": 8771.50,
+    "dayChange": 125.50,
+    "totalReturn": 1259.00,
+    "assetClass": "Stock"
+  },
+  {
+    "Id": 2,
+    "symbol": "GOOGL",
+    "name": "Alphabet Inc.",
+    "quantity": 15,
+    "avgCost": 2650.00,
+    "currentPrice": 2847.63,
+    "marketValue": 42714.45,
+    "dayChange": -285.30,
+    "totalReturn": 2964.45,
+    "assetClass": "Stock"
+  },
+  {
+    "Id": 3,
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation",
+    "quantity": 40,
+    "avgCost": 340.80,
+    "currentPrice": 378.85,
+    "marketValue": 15154.00,
+    "dayChange": 156.20,
+    "totalReturn": 1522.00,
+    "assetClass": "Stock"
+  },
+  {
+    "Id": 4,
+    "symbol": "VTI",
+    "name": "Vanguard Total Stock Market ETF",
+    "quantity": 100,
+    "avgCost": 220.15,
+    "currentPrice": 235.67,
+    "marketValue": 23567.00,
+    "dayChange": 89.40,
+    "totalReturn": 1552.00,
+    "assetClass": "ETF"
+  },
+  {
+    "Id": 5,
+    "symbol": "BND",
+    "name": "Vanguard Total Bond Market ETF",
+    "quantity": 200,
+    "avgCost": 78.25,
+    "currentPrice": 75.89,
+    "marketValue": 15178.00,
+    "dayChange": -45.60,
+    "totalReturn": -472.00,
+    "assetClass": "Bond"
+  },
+  {
+    "Id": 6,
+    "symbol": "TSLA",
+    "name": "Tesla Inc.",
+    "quantity": 25,
+    "avgCost": 280.40,
+    "currentPrice": 248.50,
+    "marketValue": 6212.50,
+    "dayChange": -187.50,
+    "totalReturn": -797.50,
+    "assetClass": "Stock"
+  },
+  {
+    "Id": 7,
+    "symbol": "VNQ",
+    "name": "Vanguard Real Estate ETF",
+    "quantity": 60,
+    "avgCost": 95.30,
+    "currentPrice": 102.45,
+    "marketValue": 6147.00,
+    "dayChange": 28.80,
+    "totalReturn": 429.00,
+    "assetClass": "REIT"
+  },
+  {
+    "Id": 8,
+    "symbol": "NVDA",
+    "name": "NVIDIA Corporation",
+    "quantity": 20,
+    "avgCost": 520.75,
+    "currentPrice": 875.28,
+    "marketValue": 17505.60,
+    "dayChange": 340.20,
+    "totalReturn": 7090.60,
+    "assetClass": "Stock"
+  }
+]
