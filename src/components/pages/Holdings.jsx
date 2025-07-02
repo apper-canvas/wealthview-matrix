@@ -38,19 +38,15 @@ const Holdings = () => {
     }
   };
 
-  const handleSaveTransaction = async (transactionData) => {
-    try {
-      if (editHolding) {
-        await updateHolding(editHolding.Id, transactionData);
-      } else {
-        await addHolding(transactionData);
-      }
-      refetch();
-      setIsModalOpen(false);
-      setEditHolding(null);
-    } catch (error) {
-      throw error;
+const handleSaveTransaction = async (transactionData) => {
+    if (editHolding) {
+      await updateHolding(editHolding.Id, transactionData);
+    } else {
+      await addHolding(transactionData);
     }
+    refetch();
+    setIsModalOpen(false);
+    setEditHolding(null);
   };
 
   if (loading) {

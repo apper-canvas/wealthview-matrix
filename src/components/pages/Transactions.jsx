@@ -25,15 +25,10 @@ const Transactions = () => {
   };
 
   const handleSaveTransaction = async (transactionData) => {
-    try {
-      await addTransaction(transactionData);
-      refetch();
-      setIsModalOpen(false);
-    } catch (error) {
-      throw error;
-    }
+await addTransaction(transactionData);
+    refetch();
+    setIsModalOpen(false);
   };
-
   const handleDeleteTransaction = async (transaction) => {
     if (window.confirm(`Are you sure you want to delete this ${transaction.type} transaction for ${transaction.symbol}?`)) {
       try {
